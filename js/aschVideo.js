@@ -56,7 +56,7 @@ $(document).ready(function () {
       // $(".closeRight").hide();
       window.location.href = "index.html?"+"type="+isFullscreenForScroll;
       // window.location.href = "index.html";
-    }, 499);
+    }, 500);
   });
   $(".aschTwo").hide();
   setTimeout(function () {
