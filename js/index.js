@@ -41,7 +41,7 @@ $(document).ready(function () {
       window.location.href = "aschVideo.html?" + "type=" + isFullscreenForScroll;
       // $(".aschOne").addClass("isFullscreenForScroll");
       // $(".aschTwo").addClass("isFullscreenForScroll");
-    }, 500);
+    }, 490);
     $("#top .container hr").addClass("closeHr")
   });
 
