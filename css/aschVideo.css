@@ -81,8 +81,8 @@ html, body {
 
 
 .openLeft .container p {
-    word-spacing: 15px;
-    font-size: 12px;
+    word-spacing: 5px;
+    font-size: 15px;
     white-space:nowrap;
 }
 
@@ -287,8 +287,8 @@ html, body {
 
 
 .openRight .container p {
-    word-spacing: 15px;
-    font-size: 12px;
+    word-spacing: 5px;
+    font-size: 15px;
     white-space:nowrap;
 }
 
@@ -421,8 +421,8 @@ html, body {
 
 
 .closeLeft .container p {
-    word-spacing: 15px;
-    font-size: 12px;
+    word-spacing: 5px;
+    font-size: 15px;
     white-space:nowrap;
 }
 
@@ -633,8 +633,8 @@ html, body {
 
 
 .closeRight .container p {
-    word-spacing: 15px;
-    font-size: 12px;
+    word-spacing: 5px;
+    font-size: 15px;
     white-space:nowrap;
 }
 
