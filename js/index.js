@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var isFullscreenForScroll;
-
+  $('#loading').hide();
   function GetRequest() {
     var url = location.search;
     var theRequest = new Object();
@@ -13,7 +13,6 @@ $(document).ready(function () {
     }
     return theRequest;
   }
-
   GetRequest();
   isFullscreenForScroll = GetRequest().type;
   if (isFullscreenForScroll == undefined) {
@@ -23,12 +22,12 @@ $(document).ready(function () {
   $("#top .container hr").addClass("aschBoundary");
   $(window).keydown(function (event) {
     if (event.keyCode == 122) {
-      if (isFullscreenForScroll = "true") {
+      if (isFullscreenForScroll == "false") {
         // alert(1);
-        isFullscreenForScroll = "false";
+        isFullscreenForScroll = "true";
       } else {
         // alert(2);
-        isFullscreenForScroll = "true";
+        isFullscreenForScroll = "false";
       }
       // isFullscreenForScroll="true";
       // alert(isFullscreenForScroll)
@@ -36,13 +35,10 @@ $(document).ready(function () {
   });
 
   $("#top .container .containerTitle").click(function () {
-
+    $("#top .container hr").addClass("closeHr");
     setTimeout(function () {
       window.location.href = "aschVideo.html?" + "type=" + isFullscreenForScroll;
-      // $(".aschOne").addClass("isFullscreenForScroll");
-      // $(".aschTwo").addClass("isFullscreenForScroll");
-    }, 500);
-    $("#top .container hr").addClass("closeHr")
+    }, 490);
   });
 
 });
