@@ -6,6 +6,22 @@
 html, body {
     background: #000;
 }
+
+
+
+#loading{
+    z-index:999;
+    width:100%;
+    height: 100%;
+    padding-top: 25%;
+    text-align: center;
+    color: lightskyblue;
+    font-size: 30px;
+    background: #fff;
+}
+
+
+
 .hideVideo{
     display: none;
 }

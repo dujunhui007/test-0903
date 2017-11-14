@@ -1,5 +1,6 @@
 $(document).ready(function () {
   var isFullscreenForScroll;
+  $('#loading').hide();
   function GetRequest() {
     var url = location.search; //获取url中"?"符后的字串
     var theRequest = new Object();
@@ -14,16 +15,18 @@ $(document).ready(function () {
   }
   GetRequest();
   isFullscreenForScroll=GetRequest().type;
-  // console.log(typeof (isFullscreenForScroll));
 
   $(window).keydown(function (event) {
     if (event.keyCode == 122) {
-      if(isFullscreenForScroll="true"){
-        isFullscreenForScroll="false";
-        $(".aschOne").removeClass("isFullscreenForScroll");
-        $(".aschTwo").removeClass("isFullscreenForScroll");
+      $(".aschOne").removeClass("isFullscreenForScroll");
+      $(".aschTwo").removeClass("isFullscreenForScroll");
+      isFullscreenForScroll="true";
+      if(isFullscreenForScroll=="true"){
+        // isFullscreenForScroll="false";
+        // $(".aschOne").removeClass("isFullscreenForScroll");
+        // $(".aschTwo").removeClass("isFullscreenForScroll");
       }else {
-        isFullscreenForScroll="true";
+        // isFullscreenForScroll="true";
         // $(".aschOne").addClass("isFullscreenForScroll");
         // $(".aschTwo").addClass("isFullscreenForScroll");
       }
@@ -47,7 +50,7 @@ $(document).ready(function () {
       // window.location.href = "index.html";
     }, 0);
     setTimeout(function () {
-      $("#aschVideo").remove(".closeLeft").remove(".closeRight");
+      $("#aschVideo").hide(".closeLeft").hide(".closeRight");
       // $("#aschVideo").remove(".closeRight");
       // window.location.href = "index.html";
     }, 500);
@@ -62,5 +65,5 @@ $(document).ready(function () {
   setTimeout(function () {
     $(".aschOne").addClass("hideVideo");
     $(".aschTwo").show().currentTime = 0;
-  }, 14500);
+  }, 14100);
 });
