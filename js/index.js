@@ -1,5 +1,12 @@
 $(document).ready(function () {
-  var isFullscreenForScroll;
+  var isFullscreenForScroll,isChrome;
+
+   isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+  alert(isChrome);
+  if (!isChrome) {
+    $("#top .container .containerTitle").addClass("isChorm")
+  }
+  
   $('.section1 #loading').hide();
   function GetRequest() {
     var url = location.search;

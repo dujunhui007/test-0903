@@ -12,18 +12,18 @@ body, html {
     position: relative;
 }
 
-.section1 #loading{
+.section1 #loading {
     position: absolute;
-    top:0px;
-    left:0px;
-    z-index:998;
-    width:100%;
+    top: 0px;
+    left: 0px;
+    z-index: 998;
+    width: 100%;
     height: 100%;
     background: #fff;
 }
 
 #loading .loadingContainer {
-    z-index:999;
+    z-index: 999;
     position: relative;
     margin-left: calc(50% - 7px);
     margin-top: 250px;
@@ -104,6 +104,7 @@ body, html {
         opacity: 1
     }
 }
+
 @keyframes loading {
     50% {
         transform: scale(.4);
@@ -114,11 +115,6 @@ body, html {
         opacity: 1
     }
 }
-
-
-
-
-
 
 a, button, input, optgroup, select, textarea {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -153,7 +149,6 @@ a, button, input, optgroup, select, textarea {
     font-family: myFontDemiBold;
     src: url("../myFont/AvenirNext-demibold.otf");
 }
-
 
 #top {
     height: 100%;
@@ -306,18 +301,22 @@ a, button, input, optgroup, select, textarea {
     cursor: pointer;
 }
 
+.isChorm{
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+}
+
 .section1 .container hr {
     /* margin: 5px 0; */
     margin-bottom: 10px;
     margin-top: -5px;
 }
 
-.aschBoundary{
+.aschBoundary {
     -webkit-animation: aschBoundary 2s;
     animation: aschBoundary 2s;
 }
 
-.closeHr{
+.closeHr {
     -webkit-animation: closeHr .5s;
     animation: closeHr .5s;
     -webkit-animation-fill-mode: forwards;
@@ -329,18 +328,19 @@ a, button, input, optgroup, select, textarea {
         width: 100%;
         margin-left: 0%;
     }
-    100%{
+    100% {
         width: 0;
         margin-left: 50%;
 
     }
 }
+
 @keyframes closeHr {
     0% {
         width: 100%;
         margin-left: 0%;
     }
-    100%{
+    100% {
         width: 0;
         margin-left: 50%;
 
@@ -352,24 +352,22 @@ a, button, input, optgroup, select, textarea {
         width: 0;
         margin-left: 50%;
     }
-    100%{
+    100% {
         width: 100%;
         margin-left: 0%;
     }
 }
+
 @keyframes aschBoundary {
     0% {
         width: 0;
         margin-left: 50%;
     }
-    100%{
+    100% {
         width: 100%;
         margin-left: 0%;
     }
 }
-
-
-
 
 .section1 .container p {
     word-spacing: 5px;
@@ -1393,7 +1391,6 @@ a, button, input, optgroup, select, textarea {
         height: 80px;
     }
 
-
     .section9 ul li:nth-child(2) span:nth-child(1) {
         width: 80px;
         height: 80px;
@@ -1433,6 +1430,7 @@ a, button, input, optgroup, select, textarea {
         font-size: 12px;
         background: #eff1f3;
     }
+
     .section9 ul li:nth-child(3) span {
         display: block;
         /* background: red; */
