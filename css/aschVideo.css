@@ -7,6 +7,16 @@ html, body {
     background: #000;
 }
 
+.isChorm{
+    font: normal 76px myFont;
+}
+
+.isNoChorm{
+    font-size: 76px;
+    font-weight: 600;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+}
+
 #aschVideo #loading {
     position: absolute;
     top: 0px;
@@ -152,7 +162,7 @@ html, body {
 }
 
 .openLeft .container .containerTitle {
-    font: normal 76px myFont;
+    /*font: normal 76px myFont;*/
     color: #000;
     letter-spacing: 6px;
     cursor: pointer;
@@ -295,7 +305,7 @@ html, body {
 }
 
 .openRight .container .containerTitle {
-    font: normal 76px myFont;
+    /*font: normal 76px myFont;*/
     color: #000;
     letter-spacing: 6px;
     cursor: pointer;
@@ -484,7 +494,7 @@ html, body {
 }
 
 .closeLeft .container .containerTitle {
-    font: normal 76px myFont;
+    /*font: normal 76px myFont;*/
     color: #000;
     letter-spacing: 6px;
     cursor: pointer;
@@ -622,7 +632,7 @@ html, body {
 }
 
 .closeRight .container .containerTitle {
-    font: normal 76px myFont;
+    /*font: normal 76px myFont;*/
     color: #000;
     letter-spacing: 6px;
     cursor: pointer;

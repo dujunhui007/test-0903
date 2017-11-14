@@ -1,9 +1,10 @@
 $(document).ready(function () {
-  var isFullscreenForScroll, isChrome, isQQBrowser, is360;
+  var isFullscreenForScroll, isChrome, isQQBrowser, is360,isUBrowser;
 
   isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
   if (isChrome) {
     isQQBrowser = window.navigator.userAgent.indexOf("QQBrowser") !== -1;
+    isUBrowser = window.navigator.userAgent.indexOf("UBrowser") !== -1;
     is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
 
     function _mime(option, value) {
@@ -16,16 +17,23 @@ $(document).ready(function () {
       return false;
     }
 
-    if (isQQBrowser) {
-      alert("是QQBrowser");
+    if (isQQBrowser||isUBrowser||is360) {
+      // alert("是QQBrowser");
       $("#top .container .containerTitle").addClass("isNoChorm")
     }
 
-    if (is360) {
-      alert("360");
-      $("#top .container .containerTitle").addClass("isNoChorm")
-    }
-    
+    // if (isUBrowser) {
+    //   // alert("isUBrowser");
+    //   $("#top .container .containerTitle").addClass("isNoChorm")
+    // }
+
+    // if (is360) {
+    //   // alert("360");
+    //   $("#top .container .containerTitle").addClass("isNoChorm")
+    // }
+
+    $("#top .container .containerTitle").addClass("isChorm")
+  }else {
     $("#top .container .containerTitle").addClass("isChorm")
   }
 
@@ -66,14 +74,14 @@ $(document).ready(function () {
     }
   });
 
-  $("#top .container .containerTitle").click(function () {
-    setTimeout(function () {
-      $("#top .container hr").addClass("closeHr");
-    }, 0);
-
-    setTimeout(function () {
-      window.location.href = "aschVideo.html?" + "type=" + isFullscreenForScroll;
-    }, 490);
-  });
+  // $("#top .container .containerTitle").click(function () {
+  //   setTimeout(function () {
+  //     $("#top .container hr").addClass("closeHr");
+  //   }, 0);
+  //
+  //   setTimeout(function () {
+  //     window.location.href = "aschVideo.html?" + "type=" + isFullscreenForScroll;
+  //   }, 490);
+  // });
 
 });

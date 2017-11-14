@@ -1,5 +1,52 @@
 $(document).ready(function () {
-  var isFullscreenForScroll;
+  var isFullscreenForScroll, isChrome, isQQBrowser, is360,isUBrowser;
+
+  isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+  if (isChrome) {
+    isQQBrowser = window.navigator.userAgent.indexOf("QQBrowser") !== -1;
+    isUBrowser = window.navigator.userAgent.indexOf("UBrowser") !== -1;
+    is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
+
+    function _mime(option, value) {
+      var mimeTypes = navigator.mimeTypes;
+      for (var mt in mimeTypes) {
+        if (mimeTypes[mt][option] == value) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    if (isQQBrowser||isUBrowser||is360) {
+      // alert("是QQBrowser");
+      $(".openLeft .container .containerTitle").addClass("isNoChorm");
+      $(".openRight .container .containerTitle").addClass("isNoChorm");
+      $(".closeLeft .container .containerTitle").addClass("isNoChorm");
+      $(".closeRight .container .containerTitle").addClass("isNoChorm")
+    }
+
+    // if (isUBrowser) {
+    //   // alert("isUBrowser");
+    //   $(".openLeft .container .containerTitle").addClass("isNoChorm");
+    //   $(".openRight .container .containerTitle").addClass("isNoChorm");
+    //   $(".closeLeft .container .containerTitle").addClass("isNoChorm");
+    //   $(".closeRight .container .containerTitle").addClass("isNoChorm")
+    // }
+
+    // if (is360) {
+    //   // alert("360");
+    //   $(".openLeft .container .containerTitle").addClass("isNoChorm");
+    //   $(".openRight .container .containerTitle").addClass("isNoChorm");
+    //   $(".closeLeft .container .containerTitle").addClass("isNoChorm");
+    //   $(".closeRight .container .containerTitle").addClass("isNoChorm")
+    // }
+    // $("#aschVideo .openLeft .container .containerTitle").addClass("isChorm");
+    $("#aschVideo .openLeft .container .containerTitle").addClass("isChorm");
+    $("#aschVideo .openRight .container .containerTitle").addClass("isChorm");
+    $("#aschVideo .closeLeft .container .containerTitle").addClass("isChorm");
+    $("#aschVideo .closeRight .container .containerTitle").addClass("isChorm")
+  }
+
   $('#loading').hide();
   function GetRequest() {
     var url = location.search; //获取url中"?"符后的字串
