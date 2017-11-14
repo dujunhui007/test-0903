@@ -1,13 +1,37 @@
 $(document).ready(function () {
-  var isFullscreenForScroll,isChrome;
+  var isFullscreenForScroll, isChrome, isQQBrowser, is360;
 
-   isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
-  alert(isChrome);
-  if (!isChrome) {
+  isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+  if (isChrome) {
+    isQQBrowser = window.navigator.userAgent.indexOf("QQBrowser") !== -1;
+    is360 = _mime("type", "application/vnd.chromium.remoting-viewer");
+
+    function _mime(option, value) {
+      var mimeTypes = navigator.mimeTypes;
+      for (var mt in mimeTypes) {
+        if (mimeTypes[mt][option] == value) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    if (isQQBrowser) {
+      alert("是QQBrowser");
+      $("#top .container .containerTitle").addClass("isNoChorm")
+    }
+
+    if (is360) {
+      alert("360");
+      $("#top .container .containerTitle").addClass("isNoChorm")
+    }
+    
     $("#top .container .containerTitle").addClass("isChorm")
   }
-  
+
+
   $('.section1 #loading').hide();
+
   function GetRequest() {
     var url = location.search;
     var theRequest = new Object();
@@ -20,6 +44,7 @@ $(document).ready(function () {
     }
     return theRequest;
   }
+
   GetRequest();
   isFullscreenForScroll = GetRequest().type;
   if (isFullscreenForScroll == undefined) {
@@ -44,7 +69,7 @@ $(document).ready(function () {
   $("#top .container .containerTitle").click(function () {
     setTimeout(function () {
       $("#top .container hr").addClass("closeHr");
-    },0);
+    }, 0);
 
     setTimeout(function () {
       window.location.href = "aschVideo.html?" + "type=" + isFullscreenForScroll;
