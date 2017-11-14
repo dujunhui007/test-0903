@@ -50,7 +50,7 @@ $(document).ready(function () {
       // window.location.href = "index.html";
     }, 0);
     setTimeout(function () {
-      $("#aschVideo").hide(".closeLeft").hide(".closeRight");
+      $("#aschVideo").remove(".closeLeft").remove(".closeRight");
       // $("#aschVideo").remove(".closeRight");
       // window.location.href = "index.html";
     }, 500);

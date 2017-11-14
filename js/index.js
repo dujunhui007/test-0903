@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var isFullscreenForScroll;
-  $('#loading').hide();
+  $('.section1 #loading').hide();
   function GetRequest() {
     var url = location.search;
     var theRequest = new Object();
@@ -35,7 +35,10 @@ $(document).ready(function () {
   });
 
   $("#top .container .containerTitle").click(function () {
-    $("#top .container hr").addClass("closeHr");
+    setTimeout(function () {
+      $("#top .container hr").addClass("closeHr");
+    },0);
+
     setTimeout(function () {
       window.location.href = "aschVideo.html?" + "type=" + isFullscreenForScroll;
     }, 490);

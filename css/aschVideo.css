@@ -7,22 +7,111 @@ html, body {
     background: #000;
 }
 
-
-
-#loading{
-    z-index:999;
-    width:100%;
+#aschVideo #loading {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 998;
+    width: 100%;
     height: 100%;
-    padding-top: 25%;
-    text-align: center;
-    color: lightskyblue;
-    font-size: 30px;
     background: #fff;
 }
 
+#loading .loadingContainer {
+    z-index: 999;
+    position: relative;
+    margin-left: calc(50% - 7px);
+    margin-top:calc(50% - 7px);
+}
 
+.loadingContainer i {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+}
 
-.hideVideo{
+.loadingContainer i:nth-child(1) {
+    top: 25px;
+    left: 0;
+    -webkit-animation: loading 1s ease 0s infinite;
+    animation: loading 1s ease 0s infinite;
+}
+
+.loadingContainer i:nth-child(2) {
+    top: 17px;
+    left: 17px;
+    -webkit-animation: loading 1s ease -.12s infinite;
+    animation: loading 1s ease -.12s infinite;
+}
+
+.loadingContainer i:nth-child(3) {
+    top: 0;
+    left: 25px;
+    -webkit-animation: loading 1s ease -.24s infinite;
+    animation: loading 1s ease -.24s infinite;
+}
+
+.loadingContainer i:nth-child(4) {
+    top: -17px;
+    left: 17px;
+    -webkit-animation: loading 1s ease -.36s infinite;
+    animation: loading 1s ease -.36s infinite;
+}
+
+.loadingContainer i:nth-child(5) {
+    top: -25px;
+    left: 0;
+    -webkit-animation: loading 1s ease -.48s infinite;
+    animation: loading 1s ease -.48s infinite;
+}
+
+.loadingContainer i:nth-child(6) {
+    top: -17px;
+    left: -17px;
+    -webkit-animation: loading 1s ease -.6s infinite;
+    animation: loading 1s ease -.6s infinite;
+}
+
+.loadingContainer i:nth-child(7) {
+    top: 0;
+    left: -25px;
+    -webkit-animation: loading 1s ease -.72s infinite;
+    animation: loading 1s ease -.72s infinite;
+}
+
+.loadingContainer i:nth-child(8) {
+    top: 17px;
+    left: -17px;
+    -webkit-animation: loading 1s ease -.84s infinite;
+    animation: loading 1s ease -.84s infinite;
+}
+
+@-webkit-keyframes loading {
+    50% {
+        transform: scale(.4);
+        opacity: .3
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes loading {
+    50% {
+        transform: scale(.4);
+        opacity: .3
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.hideVideo {
     display: none;
 }
 
@@ -32,7 +121,6 @@ html, body {
     background: #000;
 }
 
-
 #aschVideo .openLeft {
     position: absolute;
     padding-top: 30px;
@@ -41,16 +129,12 @@ html, body {
     width: 50%;
     height: 100%;
     background: #ffffff;
-    /*background: url("../images/left.png") no-repeat center;*/
-    /*background-size: cover;*/
-    /*z-index: 2;*/
     -webkit-animation: openLeft 1s;
     animation: openLeft 1s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     overflow: hidden;
 }
-
 
 .openLeft .container {
     width: 60%;
@@ -79,11 +163,10 @@ html, body {
     margin-top: -5px;
 }
 
-
 .openLeft .container p {
     word-spacing: 5px;
     font-size: 15px;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 .openLeft .container .containerLink a svg {
@@ -164,10 +247,6 @@ html, body {
     height: 25px;
 }
 
-
-
-
-
 #aschVideo .openRight {
     padding-top: 30px;
     position: absolute;
@@ -186,20 +265,19 @@ html, body {
     overflow: hidden;
 }
 
-.openRight .menu{
+.openRight .menu {
     position: absolute;
     top: 25px;
     right: 50px;
 }
 
-.openRight .menu i{
+.openRight .menu i {
     display: block;
     width: 18px;
     height: 18px;
     background: url("../images/more.png") no-repeat center center;
     background-size: cover;
 }
-
 
 .openRight .container {
     width: 60%;
@@ -229,12 +307,12 @@ html, body {
     margin-top: -5px;
 }
 
-.aschBoundary{
+.aschBoundary {
     -webkit-animation: aschBoundary 2s;
     animation: aschBoundary 2s;
 }
 
-.closeHr{
+.closeHr {
     -webkit-animation: closeHr .5s;
     animation: closeHr .5s;
     -webkit-animation-fill-mode: forwards;
@@ -246,18 +324,19 @@ html, body {
         width: 100%;
         margin-left: 0%;
     }
-    100%{
+    100% {
         width: 0;
         margin-left: 50%;
 
     }
 }
+
 @keyframes closeHr {
     0% {
         width: 100%;
         margin-left: 0%;
     }
-    100%{
+    100% {
         width: 0;
         margin-left: 50%;
 
@@ -269,27 +348,27 @@ html, body {
         width: 0;
         margin-left: 50%;
     }
-    100%{
+    100% {
         width: 100%;
         margin-left: 0%;
     }
 }
+
 @keyframes aschBoundary {
     0% {
         width: 0;
         margin-left: 50%;
     }
-    100%{
+    100% {
         width: 100%;
         margin-left: 0%;
     }
 }
 
-
 .openRight .container p {
     word-spacing: 5px;
     font-size: 15px;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 .openRight .container .containerLink a svg {
@@ -376,9 +455,6 @@ html, body {
     /*background-size: cover;*/
 }
 
-
-
-
 #aschVideo .closeLeft {
     padding-top: 30px;
     position: absolute;
@@ -419,11 +495,10 @@ html, body {
     margin-top: -5px;
 }
 
-
 .closeLeft .container p {
     word-spacing: 5px;
     font-size: 15px;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 .closeLeft .container .containerLink a svg {
@@ -504,15 +579,14 @@ html, body {
     height: 25px;
 }
 
-
-#aschVideo .closeLeftAnimation{
+#aschVideo .closeLeftAnimation {
     -webkit-animation: closeLeft .5s;
     animation: closeLeft .5s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
-#aschVideo .closeRightAnimation{
+#aschVideo .closeRightAnimation {
     -webkit-animation: closeRight .5s;
     animation: closeRight .5s;
     -webkit-animation-fill-mode: forwards;
@@ -531,7 +605,6 @@ html, body {
     background: #fff;
     /*z-index: 2;*/
 }
-
 
 .closeRight .container {
     width: 60%;
@@ -561,12 +634,12 @@ html, body {
     margin-top: -5px;
 }
 
-.aschBoundary{
+.aschBoundary {
     -webkit-animation: aschBoundary 2s;
     animation: aschBoundary 2s;
 }
 
-.closeHr{
+.closeHr {
     -webkit-animation: closeHr .5s;
     animation: closeHr .5s;
     -webkit-animation-fill-mode: forwards;
@@ -578,18 +651,19 @@ html, body {
         width: 100%;
         margin-left: 0%;
     }
-    100%{
+    100% {
         width: 0;
         margin-left: 50%;
 
     }
 }
+
 @keyframes closeHr {
     0% {
         width: 100%;
         margin-left: 0%;
     }
-    100%{
+    100% {
         width: 0;
         margin-left: 50%;
 
@@ -601,29 +675,30 @@ html, body {
         width: 0;
         margin-left: 50%;
     }
-    100%{
+    100% {
         width: 100%;
         margin-left: 0%;
     }
 }
+
 @keyframes aschBoundary {
     0% {
         width: 0;
         margin-left: 50%;
     }
-    100%{
+    100% {
         width: 100%;
         margin-left: 0%;
     }
 }
 
-.closeRight .menu{
+.closeRight .menu {
     position: absolute;
     top: 25px;
     right: 50px;
 }
 
-.closeRight .menu i{
+.closeRight .menu i {
     display: block;
     width: 18px;
     height: 18px;
@@ -631,11 +706,10 @@ html, body {
     background-size: cover;
 }
 
-
 .closeRight .container p {
     word-spacing: 5px;
     font-size: 15px;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 .closeRight .container .containerLink a svg {
@@ -722,10 +796,9 @@ html, body {
     /*background-size: cover;*/
 }
 
-.isFullscreenForScroll{
+.isFullscreenForScroll {
     margin-top: -40px;
 }
-
 
 @-webkit-keyframes closeLeft {
     0% {
@@ -737,6 +810,7 @@ html, body {
         /*z-index: 2;*/
     }
 }
+
 @keyframes closeLeft {
     0% {
         margin-left: -50%;
@@ -758,6 +832,7 @@ html, body {
         /*z-index: 2;*/
     }
 }
+
 @keyframes closeRight {
     0% {
         margin-right: -50%;
@@ -779,6 +854,7 @@ html, body {
         z-index: 1;
     }
 }
+
 @keyframes openLeft {
     0% {
         margin-left: 0;
@@ -800,6 +876,7 @@ html, body {
         z-index: 1;
     }
 }
+
 @keyframes openRight {
     0% {
         margin-right: 0;
@@ -840,6 +917,7 @@ html, body {
     /*border-radius: 1px;*/
     /*}*/
 }
+
 @keyframes aschVideo {
     0% {
         width: 1px;
@@ -888,6 +966,7 @@ html, body {
         border-radius: 1000px;
     }
 }
+
 @keyframes aschVideo1 {
     0% {
         width: 1px;
