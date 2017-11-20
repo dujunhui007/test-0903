@@ -74,14 +74,14 @@ $(document).ready(function () {
     }
   });
 
-  // $("#top .container .containerTitle").click(function () {
-  //   setTimeout(function () {
-  //     $("#top .container hr").addClass("closeHr");
-  //   }, 0);
-  //
-  //   setTimeout(function () {
-  //     window.location.href = "aschVideo.html?" + "type=" + isFullscreenForScroll;
-  //   }, 490);
-  // });
+  $("#top .container .containerTitle").click(function () {
+    setTimeout(function () {
+      $("#top .container hr").addClass("closeHr");
+    }, 0);
+
+    setTimeout(function () {
+      window.location.href = "aschVideo.html?" + "type=" + isFullscreenForScroll;
+    }, 490);
+  });
 
 });
